@@ -33,8 +33,8 @@ async def throw_exception_arg(app_id):
 
 
 @app.get("/app/exit/{app_id}")
-    '''Selected app exit'''
 async def exit_app_id(app_id, exitcode: Optional[int] = 1):
+    '''Selected app exit'''
     if id == app_id:
         await exit_app(exitcode)
     return HTTPException(status_code=status.HTTP_404_NOT_FOUND)
